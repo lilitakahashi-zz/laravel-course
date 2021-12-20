@@ -88,3 +88,7 @@ Route::get('/fun/away', function() {
 Route::get('/fun/json', function() use($posts) {
     return response()->json($posts);
 });
+
+Route::get('/fun/download', function() use($posts) {
+    return response()->download(public_path('/PoweredByMacOSX.gif'), 'Test.jpeg');
+});
